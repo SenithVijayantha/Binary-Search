@@ -10,8 +10,13 @@ public class OrderAgnosticBS {
 
         int[] arr = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         int ans = orderAgnosticBinarySearch(arr, target);
-        System.out.println(ans);
-        System.out.println(arr[ans]);
+        if (ans == -1) {
+            System.out.println("Target not found");
+        } else {
+            System.out.println("Target element is at index " + ans);
+            System.out.println("arr[ans] = " + arr[ans]);
+        }
+        
     }
 
     static int orderAgnosticBinarySearch(int[] arr, int target) {
